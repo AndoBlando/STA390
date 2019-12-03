@@ -1,4 +1,7 @@
 #!/bin/bash
+# this is an example of a bash script that runs matlab processes in parallel
+# It runs two parallel scripts, gen_obs.m and bootstrap.m, in the background.
+# both scripts are setup with parallel processing in mind: they write output to local file and/or read-in previous output
 declare -i numproc=25 # number of parallel processes to run
 declare -i numiter=50000 # total number of iterations 
 for (( count=1; count<=$numproc; count++ )) # first batch of parallel processing with matlab script gen_obs.m
